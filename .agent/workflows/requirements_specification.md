@@ -26,6 +26,7 @@ This workflow guides the process of defining requirements and creating project a
 
 4.  **Create Artifacts**
     -   **ONLY** proceed after user confirmation.
+    -   **Start Feature (Gitflow)**: Use `gitflow.start_feature("docs-reqs-<FeatureName>")`.
     -   Execute the Creation phase of the `product_owner` skill:
         -   Create the Epic file (`create_epic`).
         -   Create User Story files linked to the Epic (`create_user_story`).
@@ -35,7 +36,7 @@ This workflow guides the process of defining requirements and creating project a
     -   List the paths of all created files.
     -   Ask the user if they want to proceed with committing the changes.
 
-6.  **Commit Changes**
+6.  **Commit and Finish (Gitflow)**
     -   If approved, stage the new files (`git add ...`).
-    -   Use `smart_commit` to generate a commit message.
-    -   Commit and push.
+    -   Use `smart_commit` to generate a commit message and commit.
+    -   Use `gitflow.finish_feature` to push and create a Pull Request.
