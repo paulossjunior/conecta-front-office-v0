@@ -29,15 +29,27 @@ This workflow guides the development of frontend screens, emphasizing planning, 
     -   **DO NOT** write any implementation code until the user approves the Technical Design Plan.
     -   If changes are requested, revise the plan and re-submit.
 
-5.  **Start Feature (Gitflow)**
-    -   Once approved, use `gitflow.start_feature("feat-<component-or-screen-name>")`.
+5.  **Create GitHub Issue**
+    -   Use `github-mcp-server:issue_write` (method='create') to create an Issue for the task.
+    -   **Title**: `feat: <Task Title>`
+    -   **Body**: Include the Technical Design Plan and link to artifacts.
+    -   **Assignee**: Self (if applicable).
 
-6.  **Implementation**
-    -   Implement the code following the approved plan and architectural guidelines.
-    -   Create/Update files in `src/modules/`.
-    -   Use `smart_commit` for incremental commits if the task is large.
+6.  **Start Feature (Gitflow)**
+    -   Once approved and Issue created, use `gitflow.start_feature("feat-<component-or-screen-name>")`.
 
-7.  **Verification**
+6.  **TDD Cycle (Red-Green-Refactor)**
+    -   **Red**: Write a failing test for the feature/component in `src/modules/{Module}/__tests__/`.
+    -   **Green**: Implement the *minimum* code to make the test pass.
+    -   **Refactor**: Clean up the code while keeping tests green.
+    -   *Repeat for each logical unit.*
+
+7.  **Implementation (Continued)**
+    -   Complete the UI/Logic integration following the approved plan.
+    -   Use `smart_commit` for incremental commits.
+
+8.  **Verification**
+    -   **Run Tests**: `npm run test` (All tests must pass).
     -   Run linting/type-checking.
     -   Verify scenarios from the User Story.
 
