@@ -47,9 +47,11 @@ This skill allows the agent to adopt the persona of a Product Owner to systemati
     -   **Link**: Use `[Link](relative/path/to/file)`.
     -   **Assignee**: From the created file or "Unassigned".
 
-4.  **Review and Commit**:
-    -   Once all files are created, run `git status` to show the new files.
-    -   Propose a commit using the `smart_commit` skill pattern (e.g., `docs(project): add epic and stories for [feature]`).
+4.  **Version Control (Gitflow)**
+    -   Use the `gitflow` skill to manage branches and Pull Requests.
+    -   Start a feature branch for the new artifacts.
+    -   Commit changes using `smart_commit` skill pattern (e.g., `docs(project): add epic and stories for [feature]`).
+    -   Finish the feature to create a PR.
 
 ## Example Workflow
 
