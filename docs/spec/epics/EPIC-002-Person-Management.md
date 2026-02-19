@@ -18,7 +18,9 @@ Enables the system to register and manage individuals (Person) with their basic 
 List the User Stories associated with this Epic.
 
 - [ ] **US-002**: Create Person Record
-- [ ] **US-003**: Edit Person Address
+- [ ] **US-003**: Update Person Details
+- [ ] **US-004**: List Persons
+- [ ] **US-005**: Delete Person
 
 ## Dependencies
 - None
